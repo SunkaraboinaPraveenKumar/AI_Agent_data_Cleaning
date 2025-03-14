@@ -65,7 +65,7 @@ if data_source == "CSV/Excel":
 # ✅ Handling Database Query
 elif data_source == "Database Query":
     st.subheader("🔍 Enter Database Query")
-    db_url = st.text_input("Database Connection URL:", "postgresql://user:password@localhost:5432/db")
+    db_url = st.text_input("Database Connection URL:", "mysql+mysqlconnector://root:1234@localhost:3306/shopping")
     query = st.text_area("Enter SQL Query:", "SELECT * FROM my_table;")
 
     if st.button("🔄 Fetch & Clean Data"):

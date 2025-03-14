@@ -11,7 +11,7 @@ DB_PORT = "3306"
 DB_NAME = "shopping"
 
 # Construct the MySQL database URL
-DB_URL = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+DB_URL = f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
 # ✅ Initialize DataIngestion, DataCleaning, and AIAgent Components
 ingestion = DataIngestion(DB_URL)
