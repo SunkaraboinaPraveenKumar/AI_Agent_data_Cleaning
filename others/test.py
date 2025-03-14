@@ -78,14 +78,15 @@ class DataIngestion:
 
 # ======= TESTING THE CODE =======
 if __name__ == "__main__":
-    # 🔹 Set up database URL (Modify as needed)
-    DB_USER = "postgres"
-    DB_PASSWORD = "admin"
+    # 🔹 Set up MySQL database URL (modify credentials as needed)
+    DB_USER = "root"
+    DB_PASSWORD = "1234"
     DB_HOST = "localhost"
-    DB_PORT = "5432"
-    DB_NAME = "demodb"
+    DB_PORT = "3306"  # default MySQL port
+    DB_NAME = "shopping"  # your MySQL database name
 
-    DB_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+    # MySQL connection string using PyMySQL
+    DB_URL = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
     ingestion = DataIngestion(DB_URL)
 
@@ -101,7 +102,7 @@ if __name__ == "__main__":
 
     ## === DATABASE TEST === ##
     ingestion.connect_database(DB_URL)
-    df_db = ingestion.load_from_database("SELECT * FROM my_table")  # Change table name
+    df_db = ingestion.load_from_database("SELECT * FROM my_table")  # Change table name as needed
     if df_db is not None:
         print(df_db.head())
 
