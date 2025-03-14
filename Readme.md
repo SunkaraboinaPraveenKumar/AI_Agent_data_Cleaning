@@ -38,7 +38,7 @@ The **AI-Powered Data Cleaning System** is a **Streamlit + FastAPI + AI** applic
 2. **Backend (FastAPI)**
    - Handles requests and processes data
    - Uses **LangChain AI Agent** for intelligent cleaning
-   - Connects to **PostgreSQL** for database operations
+   - Connects to **MYSQL** for database operations
    - Fetches API data and converts it into a structured DataFrame
 
 3. **AI Agent Processing**
