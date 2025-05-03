@@ -55,7 +55,7 @@ python -m venv ai_data_cleaning_env
 
 # Activate it
 source ai_data_cleaning_env/bin/activate  # Mac/Linux
-ai_data_cleaning_env\Scripts\activate  # Windows
+ai_data_cleaning_env\Scripts\activate  # Windows 
 
  2. Install Dependencies
 
